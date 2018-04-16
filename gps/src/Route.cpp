@@ -26,4 +26,6 @@ std::istream& operator >>(std::istream& is, Route& r) {
         r.distance_ = std::stoi(buffer);
 	std::locale::global(vieuxLoc);
 	return is;
+
+	
 }
