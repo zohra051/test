@@ -71,29 +71,44 @@ void Chemin::partitionner(const string & ville, Chemin & cheminAvec,
 }
 
 void Chemin::importerCsv(istream & is) {
-
-  ifstream fichier("finistere.csv",ios::in);
-  if(fichier)
-    {
-      std::string contenu;
+ std::string contenu;
 
       do{
-      getline(fichier,contenu);
+      getline(is,contenu);
       Route r;
       istringstream str(contenu);
       str >> r;
-      routes_.push_back(r);}while(!fichier.eof());
+      routes_.push_back(r);}while(!is.eof());
       
-      fichier.close();
-    }
-  
 
 }
 
 void Chemin::exporterDot(ostream & os, const string & ville1, 
         const string & ville2) const {
+   ofstream fichier("finistere.dot",ios::out);
+  if(fichier)
+    {
+      fichier << "graph { \n";
+      fichier <<"splines=line; \n";
+      Chemin court = calculerPlusCourt(ville1,ville2);
+      for(int i=0;i<court.routes_.size();i++)
+	{
+	  if(i ==0)
+	     fichier << court.routes_[i].villeA_ << " -- " << court.routes_[i].villeB_;
+	  else
+	    fichier << " -- " <<court.routes_[i].villeB_ ;
+	}
+      fichier << " [color=red, penwidth=3]; \n";
 
-    // TODO
-
+      for(int i=0;i<routes_.size();i++)
+	{
+	  fichier << routes_[i].villeA_ << " -- " << routes_[i].villeB_ << " [label="<< routes_[i].distance_<<"]; \n";
+	}
+    
+      fichier << "}";
+      fichier.close();
+  
 }
 
+  
+}

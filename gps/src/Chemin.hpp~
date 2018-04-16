@@ -35,9 +35,9 @@ class Chemin {
         // precondition CSV au format "villeA villeB distance"
         void importerCsv(std::istream & is);
 
-     // exporte un graphe dot (avec le chemin le plus court en rouge)
+        // exporte un graphe dot (avec le chemin le plus court en rouge)
         void exporterDot(std::ostream & os, const std::string & ville1, 
-	const std::string & ville2) const;
+                const std::string & ville2) const;
 
 };
 

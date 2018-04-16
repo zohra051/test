@@ -1,6 +1,7 @@
 #include "Route.hpp"
 #include <fstream>
 #include <iostream>
+
 bool Route::operator==(const Route & r) const {
 
     // TODO
@@ -16,7 +17,7 @@ bool Route::operator!=(const Route & r) const {
 }
 
 std::istream& operator >>(std::istream& is, Route& r) {
-	std::locale vieuxLoc = std::locale::global(std::locale("fr_FR.UTF-8"));
+  //	std::locale vieuxLoc = std::locale::global(std::locale("fr_FR.UTF-8"));
     std::string buffer;
 	if (std::getline(is, buffer, ' ')) 
         r.villeA_ = buffer;
@@ -24,7 +25,7 @@ std::istream& operator >>(std::istream& is, Route& r) {
         r.villeB_ = buffer;
 	if (std::getline(is, buffer, '\n')) 
         r.distance_ = std::stoi(buffer);
-	std::locale::global(vieuxLoc);
+	//	std::locale::global(vieuxLoc);
 	return is;
 
 	
