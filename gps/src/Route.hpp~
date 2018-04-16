@@ -2,8 +2,7 @@
 #define ROUTE_HPP_
 
 #include <string>
-#include <fstream>
-#include <iostream>
+
 // route définie par deux villes et leur distance
 struct Route {
 
@@ -18,10 +17,7 @@ struct Route {
 
     // différence (teste ville A, ville B et distance)
     bool operator!=(const Route & r) const;
-
 };
-
-std::istream& operator >>(std::istream& is, Route& r);
 
 #endif
 

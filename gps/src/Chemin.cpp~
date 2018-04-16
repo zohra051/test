@@ -72,21 +72,7 @@ void Chemin::partitionner(const string & ville, Chemin & cheminAvec,
 
 void Chemin::importerCsv(istream & is) {
 
-  ifstream fichier("finistere.csv",ios::in);
-  if(fichier)
-    {
-      std::string contenu;
-
-      do{
-      getline(fichier,contenu);
-      Route r;
-      istringstream str(contenu);
-      str >> r;
-      routes_.push_back(r);}while(!fichier.eof());
-      
-      fichier.close();
-    }
-  
+    // TODO
 
 }
 
