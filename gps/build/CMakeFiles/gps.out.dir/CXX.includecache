@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/etudiants/zharrat/Documents/Genie_Logiciel/TP3/L3_GL_etudiant/TP_conception/gps/src/Chemin.cpp
+Chemin.hpp
+/etudiants/zharrat/Documents/Genie_Logiciel/TP3/L3_GL_etudiant/TP_conception/gps/src/Chemin.hpp
+limits
+-
+queue
+-
+sstream
+-
+
+/etudiants/zharrat/Documents/Genie_Logiciel/TP3/L3_GL_etudiant/TP_conception/gps/src/Chemin.hpp
+Route.hpp
+/etudiants/zharrat/Documents/Genie_Logiciel/TP3/L3_GL_etudiant/TP_conception/gps/src/Route.hpp
+iostream
+-
+vector
+-
+
+/etudiants/zharrat/Documents/Genie_Logiciel/TP3/L3_GL_etudiant/TP_conception/gps/src/Route.cpp
+Route.hpp
+/etudiants/zharrat/Documents/Genie_Logiciel/TP3/L3_GL_etudiant/TP_conception/gps/src/Route.hpp
+
+/etudiants/zharrat/Documents/Genie_Logiciel/TP3/L3_GL_etudiant/TP_conception/gps/src/Route.hpp
+string
+-
+
+/etudiants/zharrat/Documents/Genie_Logiciel/TP3/L3_GL_etudiant/TP_conception/gps/src/gps.cpp
+Chemin.hpp
+/etudiants/zharrat/Documents/Genie_Logiciel/TP3/L3_GL_etudiant/TP_conception/gps/src/Chemin.hpp
+exception
+-
+fstream
+-
+
